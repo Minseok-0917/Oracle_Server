@@ -78,4 +78,4 @@ insert into customer values('c307','정동우','서울',null);
     select * from customer order by point desc,cname asc,city asc;
 #### 4-5 다음의 의미는 ? 
     select cno, cname, city, point from customer order by 3;
-   *customer 테이블에 3번째 열을 기준으로 cno,cname,city,point 필드를 출력한다*
+    customer 테이블에 3번째 열을 기준으로 cno,cname,city,point 필드를 출력한다
