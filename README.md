@@ -44,9 +44,9 @@ insert into customer values('c307','정동우','서울',null);
     <code>select * from customer where cno = 'c101';</code>
 #### 2-2 포인트가 400 이하인 고객의 모든 정보를 검색하라
     <code>select * from customer where point <= 400;</code>
-#### 2-3 거주지가 서울 *이면서* 포인트가 500 이상인 고객의 이름, 거주지, 포인트를 검색하라
+#### 2-3 거주지가 서울 **이면서** 포인트가 500 이상인 고객의 이름, 거주지, 포인트를 검색하라
     <code>select cname,city,point from customer where city = '서울' and point >= 500;</code>
-#### 2-4 거주기가 서울 *이거나* 포인트가 500 이상인 고객의 이름, 거주지, 포인트를 검색하라
+#### 2-4 거주기가 서울 **이거나** 포인트가 500 이상인 고객의 이름, 거주지, 포인트를 검색하라
     <code>select cname,city,point from customer where city = '서울' or point >= 500;</code>
 #### 2-5 포인트가 350부터 500 사이인 고객이름, 거주지, 포인트를 검색하라
     <code>select cname,city,point from customer where point >= 350 and point <= 500;</code>
