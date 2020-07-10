@@ -33,7 +33,7 @@ insert into customer values('c307','정동우','서울',null);
 #### 1-5 customer 테이블에서 거주지를 검색하라
     <code>select city from customer;</code>
 #### 1-6 거주지를 검색하는데 중복 행을 제거하여 한 번씩만 검색하라 ★
-    select city from customer group by city; **-distinct도 가능**
+   select city from customer group by city; **-distinct도 가능**
     
 
 ### Chapter2
