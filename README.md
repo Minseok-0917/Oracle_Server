@@ -65,3 +65,17 @@ insert into customer values('c307','정동우','서울',null);
 #### 3-5 포인트가 없는 고객의 번호, 이름, 포인트를 검색하라 ( 포인트가 있는 고객의 번호, 이름, 포인트를 검색하라 )
     select cno,cname,point from customer where point is null;
     select cno,cname,point from customer where point is not null;
+
+
+### Chapter4
+#### 4-1 고객 테이블에서 이름을 오름차순 정렬하라
+    select * from customer order by cname asc;
+#### 4-2 거주지가 서울인 고객의 모든 데이터를 검색하는데, 이름의 오름차순 정렬하여 출력하라
+    select * from customer where city = '서울' order by cname asc;
+#### 4-3 거주지의 오름차순으로 정렬하고, 거주기가 같으면 포인트의 내림차순으로 정렬하라    
+    select * from customer order by city asc,point desc;
+#### 4-4 포인트가 많은 순으로(내림차순) 먼저 정렬하고, 같은 포인트는 이름의 오름차순으로 정렬하고 이름이 같으면 거주지의 오름차순으로 정렬하고 검색하라
+    select * from customer order by point desc,cname asc,city asc;
+#### 4-5 다음의 의미는 ? 
+    select cno, cname, city, point from customer order by 3;
+   *customer 테이블에 3번째 열을 기준으로 cno,cname,city,point 필드를 출력한다*
