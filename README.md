@@ -25,8 +25,13 @@ insert into customer values('c307','정동우','서울',null);
 #### 1-1 테이블의 모든 열을 검색하라
 <code>select * from customer;</code>
 #### 1-2 테이블의 모든 열을 검색(필드명 사용)
+<code>select cno,cname,city,point from customer;</code>
 #### 1-3 고객의 고객명, 거주지를 검색하라(테이블의 특정 열을 검색)
+<code>select * from customer where cno = '고객명' AND city = '거주지';</code>
 #### 1-4 cname 은 성명, city는 거주지로 출력하라(화면에 표시되는 열 이름 변경하여 검색)
+<code>select cno as 고객명,city 거주지 from customer;</code>
 #### 1-5 customer 테이블에서 거주지를 검색하라
+<code>select city from customer;</code>
 #### 1-6 거주지를 검색하는데 중복 행을 제거하여 한 번씩만 검색하라
+<code>select city from customer group by city;</code>
 
