@@ -23,27 +23,45 @@ insert into customer values('c307','정동우','서울',null);
 
 ### Chapter1
 #### 1-1 테이블의 모든 열을 검색하라 
-    <code>select * from customer;</code>
+    select * from customer;
 #### 1-2 테이블의 모든 열을 검색(필드명 사용)
-    <code>select cno,cname,city,point from customer;</code>
+    select cno,cname,city,point from customer;
 #### 1-3 고객의 고객명, 거주지를 검색하라(테이블의 특정 열을 검색)
-    <code>select * from customer where cno = '고객명' AND city = '거주지';</code>
+    select * from customer where cno = '고객명' AND city = '거주지';
 #### 1-4 cname 은 성명, city는 거주지로 출력하라(화면에 표시되는 열 이름 변경하여 검색)
-    <code>select cno as 고객명,city 거주지 from customer;</code>
+    select cno as 고객명,city 거주지 from customer;
 #### 1-5 customer 테이블에서 거주지를 검색하라
-    <code>select city from customer;</code>
-#### 1-6 거주지를 검색하는데 중복 행을 제거하여 한 번씩만 검색하라 ★
-<code>select city from customer group by city;</code> **-distinct도 가능**
+    select city from customer;
+#### 1-6 거주지를 검색하는데 중복 행을 제거하여 한 번씩만 검색하라 (distinct도 가능) ★
+    select city from customer group by city;
     
 
 ### Chapter2
 #### 2-1 고객번호가 c101 인 고객의 모든 정보를 검색하라
-    <code>select * from customer where cno = 'c101';</code>
+    select * from customer where cno = 'c101';
 #### 2-2 포인트가 400 이하인 고객의 모든 정보를 검색하라
-    <code>select * from customer where point <= 400;</code>
+    select * from customer where point <= 400;
 #### 2-3 거주지가 서울 **이면서** 포인트가 500 이상인 고객의 이름, 거주지, 포인트를 검색하라
-    <code>select cname,city,point from customer where city = '서울' and point >= 500;</code>
+    select cname,city,point from customer where city = '서울' and point >= 500;
 #### 2-4 거주기가 서울 **이거나** 포인트가 500 이상인 고객의 이름, 거주지, 포인트를 검색하라
-    <code>select cname,city,point from customer where city = '서울' or point >= 500;</code>
+    select cname,city,point from customer where city = '서울' or point >= 500;
 #### 2-5 포인트가 350부터 500 사이인 고객이름, 거주지, 포인트를 검색하라
-    <code>select cname,city,point from customer where point >= 350 and point <= 500;</code>
+    select cname,city,point from customer where point >= 350 and point <= 500;
+#### 2-6 거주지가 서울 이거나 안양인 고객번호, 이름, 거주지를 검색하라 (IN 사용) ★★
+    select cname,city,point from customer where city in('서울','안양');
+#### 2-7 거주지가 서울 아니거나 안양인 고객번호, 이름, 거주지를 검색하라 (NOT IN 사용)
+    select cname,city,point from customer where city not in('서울','안양');
+
+### Chapter3
+#### 3-1 정씨 성을 가진 고객의 모든 열을 검색하라
+    select * from customer where cname like '정%';
+#### 3-2 이름에 '동'자가 들어가는 고객의 모든 열을 검색하라
+    select * from customer where cname like '_%동%';
+#### 3-3 이름의 세번째 글자가 '우' 자가 들어가는 고객의 모든 열을 검색하라
+    select * from customer where cname like '__우';
+#### 3-4 성이 홍씨, 박씨, 정씨이 고객을 검색하라 ( 성이 홍씨, 박씨, 정씨이 아닌 고객을 검색하라 )
+    select * from customer where cname like '정%' or cname like '홍%' or cname like '박%';
+    select * from customer where cname not like '정%' and cname not like '홍%' and cname not like '박%';
+#### 3-5 포인트가 없는 고객의 번호, 이름, 포인트를 검색하라 ( 포인트가 있는 고객의 번호, 이름, 포인트를 검색하라 )
+    select cno,cname,point from customer where point is null;
+    select cno,cname,point from customer where point is not null;
