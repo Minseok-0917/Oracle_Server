@@ -21,7 +21,7 @@ insert into customer values('c307','정동우','서울',null);
 </code></pre>
 <hr/>
 
-### Charter1
+### Chapter1
 #### 1-1 테이블의 모든 열을 검색하라
 <code>select * from customer;</code>
 #### 1-2 테이블의 모든 열을 검색(필드명 사용)
@@ -35,3 +35,11 @@ insert into customer values('c307','정동우','서울',null);
 #### 1-6 거주지를 검색하는데 중복 행을 제거하여 한 번씩만 검색하라
 <code>select city from customer group by city;</code>
 
+### Chapter2
+#### 2-1 고객번호가 c101 인 고객의 모든 정보를 검색하라
+<code>select * from customer where cno = 'c101';</code>
+#### 2-2 포인트가 400 이하인 고객의 모든 정보를 검색하라
+<code>select * from customer where point <= 400;</code>
+#### 2-3 거주지가 서울 *이면서* 포인트가 500 이상인 고객의 이름, 거주지, 포인트를 검색하라
+#### 2-4 거주기가 서울 *이거나* 포인트가 500 이상인 고객의 이름, 거주지, 포인트를 검색하라
+#### 2-5 포인트가 350부터 500 사이인 고객이름, 거주지, 포인트를 검색하라
