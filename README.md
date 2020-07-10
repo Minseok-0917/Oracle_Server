@@ -53,7 +53,7 @@ insert into customer values('c307','정동우','서울',null);
     select cname,city,point from customer where city not in('서울','안양');
 
 ### Chapter3
-#### 3-1 정씨 성을 가진 고객의 모든 열을 검색하라
+#### 3-1 정씨 성을 가진 고객의 모든 열을 검색하라 
     select * from customer where cname like '정%';
 #### 3-2 이름에 '동'자가 들어가는 고객의 모든 열을 검색하라
     select * from customer where cname like '_%동%';
@@ -68,7 +68,7 @@ insert into customer values('c307','정동우','서울',null);
 
 
 ### Chapter4
-#### 4-1 고객 테이블에서 이름을 오름차순 정렬하라
+#### 4-1 고객 테이블에서 이름을 오름차순 정렬하라 ★★★
     select * from customer order by cname asc;
 #### 4-2 거주지가 서울인 고객의 모든 데이터를 검색하는데, 이름의 오름차순 정렬하여 출력하라
     select * from customer where city = '서울' order by cname asc;
