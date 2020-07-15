@@ -1,15 +1,15 @@
 # Oracle_Server
 
 ## Oracle 
-insert
-select 
-count,
-group by , having
-order by 
-max, min,sum,avg
-distinct
-join 
-primary key, cascade
+insert  
+select  
+count,  
+group by , having   
+order by    
+max, min,sum,avg    
+distinct    
+join    
+primary key, cascade    
 
 
 <hr/>
